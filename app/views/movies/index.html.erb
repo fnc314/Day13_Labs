@@ -7,11 +7,9 @@
 
   <%= link_to movie["title"], movie_path(movie["imdbid"]) %> - <%= movie["year"] %></br>
 
-  <%= button_to "delete", {controller: :movies, action: :destroy, id: movie["imdbid"] }, :method => :delete %>
-  
-
-  <br>
+<%= button_to "delete", {controller: :movies, action: :destroy, id: movie[:id] }, :method => :delete %>
 
 <% end %>
+
+
 <br>
-<%= link_to 'Add Movie to DB', new_movie_path %>

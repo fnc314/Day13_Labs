@@ -6,7 +6,7 @@ gem 'rails', '4.0.2'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
-gem 'typhoeus', '~> 0.5.0'
+gem 'typhoeus', '~> 0.5.4'
 
 gem 'json'
 

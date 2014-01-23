@@ -17,7 +17,6 @@ ActiveRecord::Schema.define(version: 20140123002456) do
     t.string   "title"
     t.string   "year"
     t.string   "imdbid"
-    t.string   "type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
