@@ -6,7 +6,7 @@ class MoviesController < ApplicationController
   end
   # route: # GET    /movies/:id(.:format)
   def show
-    @movie = Movie.find_by(:imdbid)
+    @movie = Movie.find_by(imdbid: params[:id])
   end
 
   # route: GET    /movies/new(.:format)
@@ -48,7 +48,7 @@ class MoviesController < ApplicationController
 
   # route: DELETE /movies/:id(.:format)
   def destroy
-    movie = Movie.find_by(imdbid)
+    movie = Movie.find_by(imdbid: params[:id])
     movie.destroy
     redirect_to action: :index
   end
