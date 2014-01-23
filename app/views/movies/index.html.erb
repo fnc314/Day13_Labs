@@ -1,0 +1,17 @@
+<h1>Rails Movie App</h1>
+
+
+<% @movies.each do |movie| %>
+
+  <!-- <a href="/movies/<%#= movie['imdbID'] %>"><%#= movie["Title"] %></a> - <%#= movie["Year"] %></br> -->
+
+  <%= link_to movie["title"], movie_path(movie["imdbid"]) %> - <%= movie["year"] %></br>
+
+  <%= button_to "delete", {controller: :movies, action: :destroy, id: movie["id"] }, :method => :delete %>
+  
+
+  <br>
+
+<% end %>
+<br>
+<%= link_to 'Add Movie to DB', new_movie_path %>
